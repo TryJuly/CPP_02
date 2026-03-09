@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 09:42:50 by strieste          #+#    #+#             */
-/*   Updated: 2026/03/07 18:46:24 by strieste         ###   ########.fr       */
+/*   Updated: 2026/03/06 07:43:07 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,25 +32,7 @@ class Fixed
 		float	toFloat(void) const;
 		int		toInt(void) const;
 		friend std::ostream	&operator<<(std::ostream &out, Fixed const &c);
-		bool	operator>(Fixed const &rhs) const;
-		bool	operator<(Fixed const &rhs) const;
-		bool	operator>=(Fixed const &rhs) const;
-		bool	operator<=(Fixed const &rhs) const;
-		bool	operator==(Fixed const &rhs) const;
-		bool	operator!=(Fixed const &rhs) const;
-		Fixed	operator+(Fixed const &rhs) const;
-		Fixed	operator-(Fixed const &rhs) const;
-		Fixed	operator*(Fixed const &rhs) const;
-		Fixed	operator/(Fixed const &rhs) const;
-		Fixed&	operator++();
-		Fixed	operator++(int);
-		Fixed&	operator--();
-		Fixed	operator--(int);
-		static Fixed&	min(Fixed &rhs, Fixed &lhs);
-		static const Fixed&	min(Fixed const &rhs, Fixed const &lhs);
-		static Fixed&	max(Fixed &rhs, Fixed &lhs);
-		static const Fixed&	max(Fixed const &rhs, Fixed const &lhs);
-
+		
 	private:
 		int		_fixedPointValue;
 		static const int _bits = 8;
