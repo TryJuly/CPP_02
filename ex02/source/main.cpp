@@ -6,11 +6,11 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 09:42:31 by strieste          #+#    #+#             */
-/*   Updated: 2026/03/08 14:14:11 by strieste         ###   ########.fr       */
+/*   Updated: 2026/03/13 11:51:07 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "../header/Fixed.hpp"
 
 int main( void ) {
 
