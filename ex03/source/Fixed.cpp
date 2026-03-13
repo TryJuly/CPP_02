@@ -6,18 +6,13 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 09:50:23 by strieste          #+#    #+#             */
-/*   Updated: 2026/03/07 19:26:41 by strieste         ###   ########.fr       */
+/*   Updated: 2026/03/13 14:00:36 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Fixed.hpp"
+#include "../header/Fixed.hpp"
 
-Fixed::Fixed(void)
-{
-	// std::cout << "Default constructor called" << std::endl;
-	this->_fixedPointValue = 0;
-	return ;
-}
+Fixed::Fixed(void): _fixedPointValue(0) {}
 
 Fixed::Fixed(int const nb)
 {

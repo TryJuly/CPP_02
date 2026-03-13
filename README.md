@@ -37,3 +37,20 @@
 -	Encapsulation : L'utilisateur de la classe manipule les objets sans avoir besoin de savoir comment les bits sont décalés à l'intérieur.
 
 -	Chaînage : Grâce à la surcharge de <<, on peut afficher plusieurs objets à la suite dans un seul flux, comme avec des variables classiques
+
+Calcule de vecteur :
+
+	AB = (Bx - Ax, By - Ay)
+
+	AP = (Px-Ax, Py-Ay)
+
+Le cross product :
+
+	AB × AP = (Bx-Ax) * (Py-Ay) - (By-Ay) * (Px-Ax)
+
+	Ce calcul donne l'aire du parallélogramme formé par les deux vecteurs, et son signe indique le côté
+
+	ex :	res > 0 	P est a gauche de AB
+			res < 0		P est a droite de AB
+			res = 0		P est sur la droite AB
+

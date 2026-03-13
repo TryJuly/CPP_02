@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Point.hpp                                          :+:      :+:    :+:   */
+/*   Point.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/03/08 16:15:50 by strieste          #+#    #+#             */
-/*   Updated: 2026/03/08 16:29:09 by strieste         ###   ########.fr       */
+/*   Created: 2026/03/08 16:15:58 by strieste          #+#    #+#             */
+/*   Updated: 2026/03/13 13:58:33 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef POINT_HPP
-# define POINT_HPP
+#include "../header/Point.hpp"
 
-# include "Fixed.hpp"
+Point::Point(): _x(0), _y(0) {}
 
-class Point
+Point::Point(float const x, float const y): _x(x), _y(y)
+{}
+Point::Point(Point const &copy): _x(copy._x), _y(copy._y) {}
+
+Point&	Point::operator=(Point const &copy)
 {
-	public:
-		Point();
-		Point(int const x, int const y);
-		Point(Point& copy);
-		Point&	operator=(Point const &copy);
-		~Point();
-		
-	private:
-		Fixed const	_x;
-		Fixed const	_y;
-};
+	(void)copy;
+	return (*this);
+}
 
-#endif
+Point::~Point() {}
+
+Fixed const&	Point::getX() const { return (this->_x); }
+
+Fixed const&	Point::getY() const { return (this->_y); }
