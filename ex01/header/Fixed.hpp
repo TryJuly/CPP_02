@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 09:42:50 by strieste          #+#    #+#             */
-/*   Updated: 2026/03/06 07:43:07 by strieste         ###   ########.fr       */
+/*   Updated: 2026/03/17 17:45:19 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,13 @@ class Fixed
 		void	setRawBits(int const raw);
 		float	toFloat(void) const;
 		int		toInt(void) const;
-		friend std::ostream	&operator<<(std::ostream &out, Fixed const &c);
 		
-	private:
+		private:
 		int		_fixedPointValue;
 		static const int _bits = 8;
-	
-};
+		
+	};
+
+std::ostream	&operator<<(std::ostream &out, Fixed const &c);
 
 #endif

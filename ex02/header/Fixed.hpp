@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 09:42:50 by strieste          #+#    #+#             */
-/*   Updated: 2026/03/07 18:46:24 by strieste         ###   ########.fr       */
+/*   Updated: 2026/03/17 17:47:24 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,12 @@ class Fixed
 		Fixed(Fixed const &copy);
 		Fixed(float const floatingPoint);
 		Fixed& operator=(Fixed const &copy);
-		~Fixed(void);
-		
+		~Fixed();
+
 		int		getRawBits(void) const;
 		void	setRawBits(int const raw);
 		float	toFloat(void) const;
 		int		toInt(void) const;
-		friend std::ostream	&operator<<(std::ostream &out, Fixed const &c);
 		bool	operator>(Fixed const &rhs) const;
 		bool	operator<(Fixed const &rhs) const;
 		bool	operator>=(Fixed const &rhs) const;
@@ -50,11 +49,13 @@ class Fixed
 		static const Fixed&	min(Fixed const &rhs, Fixed const &lhs);
 		static Fixed&	max(Fixed &rhs, Fixed &lhs);
 		static const Fixed&	max(Fixed const &rhs, Fixed const &lhs);
-
-	private:
+		
+		private:
 		int		_fixedPointValue;
 		static const int _bits = 8;
-	
-};
+		
+	};
+
+std::ostream	&operator<<(std::ostream &out, Fixed const &c);
 
 #endif

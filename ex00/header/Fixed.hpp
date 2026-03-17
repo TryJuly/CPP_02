@@ -6,7 +6,7 @@
 /*   By: strieste <strieste@student.42.ch>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/05 09:42:50 by strieste          #+#    #+#             */
-/*   Updated: 2026/03/05 15:31:16 by strieste         ###   ########.fr       */
+/*   Updated: 2026/03/17 17:41:39 by strieste         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,13 @@
 class Fixed
 {
 	public:
-		Fixed(void);
+		Fixed( void );
 		Fixed(Fixed const &copy);
-		~Fixed(void);
+		~Fixed();
 		Fixed& operator=(Fixed const &copy);
-		int		getRawBits(void) const;
+		int		getRawBits( void ) const;
 		void	setRawBits(int const raw);
+
 	private:
 		int		i;
 		static const int j = 8;
